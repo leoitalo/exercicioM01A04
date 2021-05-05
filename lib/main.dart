@@ -36,7 +36,7 @@ class _CounterScreenState extends State<CounterScreen> {
           ),
           Center(
             child: Text(
-              '${controller.counter}',
+              controller.getCounter(),
               style: TextStyle(
                 fontSize: 34,
               ),
@@ -52,7 +52,7 @@ class _CounterScreenState extends State<CounterScreen> {
           }),
           OperationFloatActionButton(Icon(Icons.add), () {
             setState(() {
-              controller.incrementCounter();  
+              controller.incrementCounter();   
             });
             
           }),
