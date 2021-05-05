@@ -6,8 +6,8 @@ class CounterModel{
     return _counter;
   }
 
-  void incrementCounter(){
-    _counter++;
+  void modifierCounter(int valor, Function(int, int) operation){
+    _counter = operation(valor, _counter);
   }
 
 }
